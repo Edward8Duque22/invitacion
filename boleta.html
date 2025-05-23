@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ticket</title>
+<style>
+  body {
+    background: #222;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .ticket {
+    background: #fff;
+    width: 350px;
+    border: 2px dashed #333;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    position: relative;
+  }
+  .ticket::before,
+  .ticket::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    background: #222;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+  }
+  .ticket::before {
+    left: -12px;
+  }
+  .ticket::after {
+    right: -12px;
+  }
+  h2 {
+    text-align: center;
+    margin: 0 0 10px 0;
+    letter-spacing: 4px;
+    color: #d22;
+  }
+  .movie-title {
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+  .details div {
+    flex: 1;
+  }
+  .details div:not(:last-child) {
+    border-right: 1px solid #ccc;
+    padding-right: 10px;
+  }
+  .barcode {
+    width: 100%;
+    height: 40px;
+    background: repeating-linear-gradient(
+      90deg,#000,#000 2px,#fff 2px,#fff 6px
+    );
+    margin-top: 15px;
+    border-radius: 4px;
+  }
+  .footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #555;
+    margin-top: 12px;
+  }
+  .copyright {
+    margin-top: 5px;
+    font-size: 0.7em;
+    color: #777;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="ticket">
+    <h2>TICKET</h2>
+    <div class="movie-title">Avengers: Endgame</div>
+    <div class="details">
+      <div>
+        <strong>Sala:</strong><br />Mi mente
+      </div>
+      <div>
+        <strong>Asiento:</strong><br />Mi corazón
+      </div>
+      <div>
+        <strong>Fecha:</strong><br />Tu la pones
+      </div>
+      <div>
+        <strong>Hora:</strong><br />Tu decides
+      </div>
+    </div>
+    <div class="details">
+      <div>
+        <strong>Tipo:</strong><br />3D
+      </div>
+      <div>
+        <strong>Precio:</strong><br />Ninguno
+      </div>
+      <div>
+        <strong>Comida:</strong><br />Tu boca
+      </div>
+      <div>
+        <strong>Bebida:</strong><br />Tus besos
+      </div>
+    </div>
+    <div class="barcode"></div>
+    <div class="footer">No eres una en un millón, eres una en toda la vida</div>
+    <div class="copyright">© 2025 Invitación diseñada por Edward. <br>Todos los derechos reservados.</div>
+  </div>
+</body>
+</html>
